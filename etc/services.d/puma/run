@@ -1,0 +1,7 @@
+#!/usr/bin/with-contenv sh
+
+cd /usr/src/app
+
+chown -R www-data:www-data .
+
+exec sudo -u www-data puma -C /etc/puma.rb
